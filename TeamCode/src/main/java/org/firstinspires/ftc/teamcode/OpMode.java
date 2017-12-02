@@ -50,8 +50,7 @@ import com.qualcomm.robotcore.util.Range;
  * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
  */
 
-@TeleOp(name="Basic: Linear OpMode", group="Linear Opmode")
-@Disabled
+@TeleOp(name="DriveMode", group="Linear Opmode")
 public class OpMode extends LinearOpMode {
 
     // Declare OpMode members.
@@ -91,7 +90,7 @@ public class OpMode extends LinearOpMode {
 
 
             //Tank Mode uses one stick to control each wheel.
-            // - This requires no math, but it is hard to drive forward slowly and keep straight.
+            // - This requires no math, but it is hard to drive forward slowly and keep straight
             leftPower  = -gamepad1.left_stick_y ;
             rightPower = -gamepad1.right_stick_y ;
 
