@@ -64,6 +64,6 @@ public class FtcOpModeRegister implements OpModeRegister {
      */
     public void register(OpModeManager manager) {
 
-        manager.register("DriveMode", OpMode.class);
+        //manager.register("DriveMode", OpMode.class);
     }
 }
