@@ -40,14 +40,6 @@ import com.qualcomm.robotcore.util.Range;
 
 
 /**
- * This file contains an minimal example of a Linear "OpMode". An OpMode is a 'program' that runs in either
- * the autonomous or the teleop period of an FTC match. The names of OpModes appear on the menu
- * of the FTC Driver Station. When an selection is made from the menu, the corresponding OpMode
- * class is instantiated on the Robot Controller and executed.
- *
- * This particular OpMode just executes a basic Tank Drive Teleop for a two wheeled robot
- * It includes all the skeletal structure that all linear OpModes contain.
- *
  * Use Android Studios to Copy this Class, and Paste it into your team's code folder with a new name.
  * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
  */
@@ -101,6 +93,7 @@ public class OpMode extends LinearOpMode {
             double servoPos;
             double servoPosBot;
 
+            //slidebar
             if (gamepad1.dpad_up){
                 slidebar.setPower(80);
             }
@@ -111,6 +104,7 @@ public class OpMode extends LinearOpMode {
                 slidebar.setPower(0);
             }
 
+            //use bumpers for grabber servos
             if (gamepad1.left_bumper){
                 servoPos = 0.85;
                 servoPosBot = -servoPos + 1;
@@ -131,15 +125,14 @@ public class OpMode extends LinearOpMode {
                 bottomRight.setPosition(servoPosBot);
 
             }
-
-
+            //speed changes
             if (gamepad1.a){
                 speedfactor = 0.6;
             }
             if (gamepad1.b){
                 speedfactor = 0.2;
             }
-
+            //set power
             leftPower  = -gamepad1.left_stick_y ;
             rightPower = -gamepad1.right_stick_y ;
             // Send calculated power to wheels
