@@ -116,7 +116,7 @@ public class OpMode extends LinearOpMode {
 
             }
             if (gamepad1.left_trigger > 0){
-                servoPos = 0.15;
+                servoPos = 0.3;
                 servoPosBot = -servoPos + 1;
 
                 topLeft.setPosition(servoPos);
@@ -130,7 +130,7 @@ public class OpMode extends LinearOpMode {
                 speedfactor = 0.6;
             }
             if (gamepad1.b){
-                speedfactor = 0.2;
+                speedfactor = 0.25;
             }
             //set power
             leftPower  = -gamepad1.left_stick_y ;
