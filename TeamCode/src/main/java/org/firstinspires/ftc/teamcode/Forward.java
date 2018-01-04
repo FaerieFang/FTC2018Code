@@ -79,8 +79,11 @@ public class Forward extends OpMode {
       while (i < 2000){
           i +=1;
       }
-      motorLeft.setPower(0);
-      motorRight.setPower(0);
+      if (i > 1999){
+          motorLeft.setPower(0);
+          motorRight.setPower(0);
+      }
+
   }
 
   /*
